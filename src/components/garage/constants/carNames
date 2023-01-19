@@ -1,0 +1,41 @@
+export const BRANDS = [
+  'BMW',
+  'Toyota',
+  'Nissan',
+  'Ford',
+  'Mitsubishi',
+  'Porsche',
+  'Lexus',
+  'Aston Martin',
+  'Audi',
+  'Mercedes-Benz',
+  'Chevrolet',
+  'Cadillac',
+  'Dodge',
+  'Lotus',
+  'Subaru',
+  'Volkswagen',
+  'Koenigsegg',
+  'Fiat'
+];
+
+export const MODELS = [
+  'M3 GTR',
+  'Supra',
+  'Skyline R34 GT-R',
+  'Mustang GT (2005)',
+  'Lancer',
+  '911 Turbo S',
+  'IS 300',
+  'DB9',
+  'TT quattro',
+  'SL 65 AMG',
+  'Camaro SS (1967)',
+  'CTS',
+  'Viper SRT-10 (2003)',
+  'Elise 111R',
+  'Impreza WRX STI',
+  'Golf GTI (Mk5)',
+  'CCXR edition',
+  'Grande Punto'
+]

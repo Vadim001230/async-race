@@ -1,0 +1,1 @@
+export const CAR_PAGE_LIMIT = 7;
