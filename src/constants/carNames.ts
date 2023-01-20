@@ -16,7 +16,7 @@ export const BRANDS = [
   'Subaru',
   'Volkswagen',
   'Koenigsegg',
-  'Fiat'
+  'Fiat',
 ];
 
 export const MODELS = [
@@ -37,5 +37,5 @@ export const MODELS = [
   'Impreza WRX STI',
   'Golf GTI (Mk5)',
   'CCXR edition',
-  'Grande Punto'
-]
+  'Grande Punto',
+];
