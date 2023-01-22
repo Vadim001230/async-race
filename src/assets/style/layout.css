@@ -20,6 +20,7 @@
 }
 
 html, body {
+  font-family: Arial, sans-serif;
   scroll-behavior: smooth;
   min-height: 100vh;
   font-size: 16px;
@@ -34,4 +35,35 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   font-weight: inherit;
   font-size: inherit;
+}
+
+.body {
+  background: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-color: #000;
+  color: #fff;
+  background-position: center;
+  background-size: cover;
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+}
+
+input {
+  outline: none;
 }
