@@ -4,7 +4,7 @@ import {
 import { renderCarImg } from './renderCarImg';
 
 export const renderCar = (id: number, name:string, color: string) => `
-  <div class="car" id="${id.toString()}">
+  <div class="car" id="${id.toString()}" data-name="${name}" data-color="${color}">
     <div class="car__info">
       <div class="cars__info-btns">
       ${renderBtnStop()}

@@ -128,7 +128,7 @@
   position: absolute;
   left: 50%;
   transform: translate(-55%);
-  top: 90px;
+  top: 100px;
   background: var(--gradient);
   background-size: 20px 20px;
   border: 5px solid #000;
@@ -144,6 +144,10 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
+}
+
+.menu__update {
+  display: none;
 }
 
 .menu__create-input_name,
@@ -206,7 +210,7 @@
 }
 
 .cars {
-  margin-top: 180px;
+  margin-top: 190px;
   width: 100%;
 }
 
@@ -323,7 +327,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .pagination__left,
@@ -390,4 +395,35 @@
   background-image: url('./assets/img/rs_school.svg');
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 880px) {
+
+  .header__title {
+    font-size: 40px;
+  }
+  .header__btns-container  {
+    margin-top: -25px;
+  }
+  .menu {
+    top: 130px;
+  }
+  .cars {
+    margin-top: 250px;
+  }
+
+}
+
+@media (max-width: 880px) {
+
+  .header__title {
+    font-size: 22px;
+  }
+  .header__btns-container {
+    margin-top: -15px;
+  }
+  .menu {
+    transform: translate(-50%) scale(0.8);
+  }
+
 }

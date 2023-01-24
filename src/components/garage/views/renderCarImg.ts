@@ -1,5 +1,5 @@
 export const renderCarImg = (color: string) => `
-  <div class="car__img">
+  <div class="car__img" data-color="${color}">
     <svg fill="${color}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
     width="140px" height="45px" viewBox="100 100 110 110" xml:space="preserve">
       <g>

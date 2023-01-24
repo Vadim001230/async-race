@@ -1,8 +1,7 @@
 import { renderMenu } from './views/renderMenu';
-import { renderCar } from './views/renderCar';
 import { renderPagination } from './views/renderPagination';
 
-export const renderGarageView = () => {
+export const renderGarageView = async (page: number) => {
   document.body.innerHTML = `
     <header class="header container">
       <h1 class="header__title">Async Race</h1>
@@ -14,9 +13,8 @@ export const renderGarageView = () => {
     <main class="main container">
       ${renderMenu(1)}
       <div class="cars">
-      ${renderCar(1, 'Tesla', '#ffffff')}
       </div>
-      ${renderPagination(1)}
+      ${renderPagination(page)}
       <div class="winners container" style="display: none;"></div>
     </main>
     <footer class="footer">
