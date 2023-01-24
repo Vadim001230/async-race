@@ -15,7 +15,8 @@ export const updateCarBtn = async () => {
     color: menuUpdateInputColor.value,
   }, id);
   menuUpdate.style.display = 'none';
-  renderCars(1).catch((err: string) => {
+  const page = +checkSelector(document, '.pagination__number').innerHTML;
+  renderCars(page).catch((err: string) => {
     throw new Error(err);
   });
 };

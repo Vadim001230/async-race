@@ -1,4 +1,4 @@
-export const renderMenu = (carsAmount: number) => `
+export const renderMenu = () => `
   <div class="menu">
     <div class="menu__create">
       <input type="text" class="menu__create-input_name" placeholder="name car">
@@ -17,6 +17,6 @@ export const renderMenu = (carsAmount: number) => `
       <button class="menu__btn-generate">GENERATE CARS</button>
     </div>
 
-    <div class="menu__amount">Cars amount <span>${carsAmount.toString()}</span></div>
+    <div class="menu__amount">Cars amount <span>1</span></div>
   </div>
 `;

@@ -2,7 +2,7 @@ import { renderWinnersView } from '../winners/renderWinnersView';
 import { renderMenu } from './views/renderMenu';
 import { renderPagination } from './views/renderPagination';
 
-export const renderGarageView = async (page: number) => {
+export const renderGarageView = async () => {
   document.body.innerHTML = `
     <header class="header container">
       <h1 class="header__title">Async Race</h1>
@@ -13,12 +13,12 @@ export const renderGarageView = async (page: number) => {
     </header>
     <main class="main container">
       <div class="garage">
-        ${renderMenu(1)}
+        ${renderMenu()}
         <div class="cars"></div>
-        ${renderPagination(page)}
+        ${renderPagination()}
       </div>
       <div class="winners container" style="display: none;">
-      ${renderWinnersView(1)}
+      ${renderWinnersView()}
       </div>
     </main>
     <footer class="footer">

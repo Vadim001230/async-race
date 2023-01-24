@@ -342,11 +342,20 @@
   padding: 6px;
 }
 
+.pagination__left.disabled,
+.pagination__right.disabled {
+  color: var(--color-grey);
+}
+
 .pagination__left:hover,
 .pagination__right:hover,
 .winners-pagination__left:hover,
 .winners-pagination__right:hover {
   color: var(--color-gold);
+}
+
+.disabled:hover {
+  color: var(--color-grey);
 }
 
 .pagination__number,

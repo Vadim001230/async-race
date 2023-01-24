@@ -1,7 +1,7 @@
 // import { checkSelector } from '../../utils/checkSelector';
 // const winnersHtml = checkSelector(document, '.winners');
 // winnersHtml.innerHTML
-export const renderWinnersView = (page: number) => `
+export const renderWinnersView = () => `
     <div class="winners__amount">Winners amount <span>1</span></div>
 
     <div class="winners-table">
@@ -51,7 +51,7 @@ export const renderWinnersView = (page: number) => `
 
     <div class="winners-pagination">
       <button class="winners-pagination__left"> < </button>
-      <span class="winners-pagination__number"> ${page.toString()} </span>
+      <span class="winners-pagination__number"> 1 </span>
       <button class="winners-pagination__right"> > </button>
     </div>
   `;
