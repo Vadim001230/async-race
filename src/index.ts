@@ -13,8 +13,6 @@ async function app() {
 
   checkSelector(document, '.menu__create-btn').addEventListener('click', createCarBtn);
   controlCarBtns();
-  // eslint-disable-next-line no-alert
-  alert('Приложение еще в разработке, если есть возможность, подождите немного с кросс-чеком, заранее спасибо!');
 }
 
 app().catch((err: string) => {
