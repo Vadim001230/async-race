@@ -15,8 +15,8 @@ export const paginationListner = () => {
       page = 1;
     } else {
       paginationLeft.classList.remove('disabled');
-      paginationRight.classList.remove('disabled');
     }
+    paginationRight.classList.remove('disabled');
     paginationNumber.innerHTML = page.toString();
     await renderCars(page);
   });
@@ -32,7 +32,7 @@ export const paginationListner = () => {
       paginationRight.classList.remove('disabled');
     }
     paginationNumber.innerHTML = page.toString();
-    paginationLeft.classList.remove('disabled');
+    if (page !== 1) paginationLeft.classList.remove('disabled');
     await renderCars(page);
   });
 };

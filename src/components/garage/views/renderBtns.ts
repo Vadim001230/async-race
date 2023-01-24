@@ -1,10 +1,10 @@
 export const renderBtnStop = () => `
-<button class="cars__info-btn_stop">
+<button class="cars__info-btn_stop disabled">
   <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
     width="35px" height="65px" viewBox="20 150 320 50"
     preserveAspectRatio="xMidYMid meet" class="pedal-svg">
     <g class="btn-hover" transform="translate(0.000000,380.000000) scale(0.100000,-0.100000)"
-    fill="#2D2D2D" stroke="none">
+    fill="#ffffff" stroke="none">
     <path d="M1280 4480 l0 -530 320 0 320 0 0 530 0 530 -320 0 -320 0 0 -530z"/>
     <path d="M539 3707 c-24 -13 -57 -43 -74 -66 l-30 -43 -3 -575 -2 -575 166
     -252 c188 -282 221 -326 273 -358 l36 -23 695 0 695 0 38 23 c49 31 95 92 282

@@ -235,10 +235,11 @@
 }
 
 .car__img {
+  position: relative;
   width: 140px;
   height: 46px;
-  /* transition: 5s;
-  transform: translateX(1100px) rotate(-1deg); */
+  left: 0;
+  transition: transform .2s;
 }
 
 .car__finish {
@@ -269,13 +270,24 @@
 }
 
 .pedal-svg:hover .btn-hover,
-.btn-svg:hover .btn-hover {
+.btn-svg:hover .btn-hover,
+.cars__info-btn_start.active .pedal-svg g {
   transition: .2s;
   fill: var(--color-gold);
 }
 
-.pedal-svg:active {
+.pedal-svg:active,
+.cars__info-btn_start.active .pedal-svg {
   transform: translateY(4px) scale(0.95);
+}
+
+.disabled .pedal-svg g,
+.disabled svg,
+.disabled {
+  cursor: default;
+  transition: .3s;
+  fill: var(--color-grey);
+  pointer-events: none;
 }
 
 .car__info-name {
@@ -344,6 +356,8 @@
 
 .pagination__left.disabled,
 .pagination__right.disabled {
+  cursor: default;
+  pointer-events: none;
   color: var(--color-grey);
 }
 
@@ -355,6 +369,8 @@
 }
 
 .disabled:hover {
+  cursor: default;
+  pointer-events: none;
   color: var(--color-grey);
 }
 
