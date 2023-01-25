@@ -5,12 +5,17 @@ import { URL } from '../../../constants/URL';
 import { startStopEngine } from '../API/startStopEngine';
 import { switchToDriveMode } from '../API/switchToDriveMode';
 import { createCarBtn } from './createCarBtn';
+import { startRace } from './startRace';
+import { stopRace } from './stopRace';
+import { generateRandomCars } from './generateCars';
 
 export const controlCarBtns = () => {
-  const car: NodeListOf<HTMLDivElement> = document.querySelectorAll('.car');
+  const cars: NodeListOf<HTMLDivElement> = document.querySelectorAll('.car');
   const menuUpdateBtn = checkSelector(document, '.menu__update-btn') as HTMLButtonElement;
   const createBtn = checkSelector(document, '.menu__create-btn') as HTMLButtonElement;
-  car.forEach((item: HTMLDivElement) => {
+  const btnReset = checkSelector(document, '.menu__btn-reset') as HTMLButtonElement;
+  const btnRace = checkSelector(document, '.menu__btn-race') as HTMLButtonElement;
+  cars.forEach((item: HTMLDivElement) => {
     const { id } = item;
     const carImg = checkSelector(item, '.car__img') as HTMLDivElement;
     const btnStart = checkSelector(item, '.cars__info-btn_start');
@@ -19,6 +24,7 @@ export const controlCarBtns = () => {
     const btnDelete = checkSelector(item, '.cars__info-btn_delete');
 
     btnStart.addEventListener('click', async () => {
+      btnRace.classList.add('disabled');
       btnEdit.classList.add('disabled');
       btnDelete.classList.add('disabled');
       createBtn.style.pointerEvents = 'none';
@@ -31,6 +37,7 @@ export const controlCarBtns = () => {
       btnStart.classList.remove('active');
       btnStart.classList.add('disabled');
       btnStop.classList.remove('disabled');
+      btnReset.classList.remove('disabled');
       setTimeout(() => {
         createBtn.style.pointerEvents = 'auto';
       }, 5000);
@@ -68,6 +75,9 @@ export const controlCarBtns = () => {
     });
   });
 
+  checkSelector(document, '.menu__btn-generate').addEventListener('click', generateRandomCars);
+  checkSelector(document, '.menu__btn-race').addEventListener('click', startRace);
+  checkSelector(document, '.menu__btn-reset').addEventListener('click', stopRace);
   checkSelector(document, '.menu__create-btn').addEventListener('click', createCarBtn);
   menuUpdateBtn.addEventListener('click', updateCarBtn);
 };

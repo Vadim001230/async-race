@@ -13,7 +13,7 @@ export const renderMenu = () => `
 
     <div class="menu__btns">
       <button class="menu__btn-race">RACE</button>
-      <button class="menu__btn-reset">RESET</button>
+      <button class="menu__btn-reset disabled">RESET</button>
       <button class="menu__btn-generate">GENERATE CARS</button>
     </div>
 
