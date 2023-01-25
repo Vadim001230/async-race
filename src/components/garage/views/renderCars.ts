@@ -12,7 +12,7 @@ export const renderCars = async (page: number) => {
       ${renderCar(id, name, color)}
     `;
   });
-  checkSelector(document, '.menu__amount span').innerHTML = amount || '1';
+  checkSelector(document, '.menu__amount span').innerHTML = amount || '0';
   if (amount) {
     if (+amount > 7) {
       checkSelector(document, '.pagination__right').classList.remove('disabled');

@@ -7,6 +7,8 @@ import { CAR_PAGE_LIMIT } from '../../../constants/carOnPageLimit';
 import { DISTANCE } from '../../../constants/distance';
 import { TIME_COEFFICIENT } from '../../../constants/timeCoeff';
 import { showWinMsg } from '../views/showWinMsg';
+import { createWinner } from '../../winners/API/createWinner';
+import { renderRowsWinners } from '../../winners/views/renderRowsWinners';
 
 export const startRace = async () => {
   const cars: NodeListOf<HTMLDivElement> = document.querySelectorAll('.car');
@@ -60,8 +62,16 @@ export const startRace = async () => {
   const winnerSpeed = Math.max(...arrVelocity);
   const winnerTime = (((DISTANCE / winnerSpeed) / TIME_COEFFICIENT) / 1000).toFixed(2);
   const winnerCar = document.getElementById(winnerId.toString()) as HTMLElement;
-  const winnerName = winnerCar.dataset.name;
+  const winnerName = winnerCar.dataset.name || 'Car';
   setTimeout(() => {
-    showWinMsg(`${winnerName || 'Car'} wins! [${winnerTime}sec]`);
+    showWinMsg(`${winnerName} wins! [${winnerTime}sec]`);
   }, 2700);
+
+  await createWinner(URL, {
+    id: winnerId,
+    wins: 1,
+    time: +winnerTime,
+  });
+  const pageWinner = +checkSelector(document, '.winners-pagination__number').innerHTML;
+  await renderRowsWinners(pageWinner);
 };

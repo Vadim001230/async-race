@@ -1,4 +1,3 @@
-import { renderWinnersView } from '../winners/renderWinnersView';
 import { renderMenu } from './views/renderMenu';
 import { renderPagination } from './views/renderPagination';
 
@@ -19,7 +18,6 @@ export const renderGarageView = async () => {
         ${renderPagination()}
       </div>
       <div class="winners container" style="display: none;">
-      ${renderWinnersView()}
       </div>
     </main>
     <footer class="footer">
