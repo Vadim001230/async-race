@@ -15,6 +15,8 @@ export const stopRace = (): void => {
       btn.classList.remove('disabled');
     });
   }
-  addDisabled([btnRace, btnCreate, btnGenerate]);
+  setTimeout(() => {
+    addDisabled([btnRace, btnCreate, btnGenerate]);
+  }, 2000);
   btnReset.classList.add('disabled');
 };

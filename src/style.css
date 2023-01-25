@@ -124,6 +124,8 @@
 }
 
 .menu {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   position: absolute;
   left: 50%;
@@ -174,6 +176,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: auto;
 }
 
 .menu__create-btn,
@@ -200,7 +203,7 @@
 .menu__amount,
 .winners__amount {
   letter-spacing: 1px;
-  margin-top: 10px;
+  margin-bottom: 5px;
   font-weight: 600;
   text-shadow: var(--text-shadow);
 }
@@ -283,7 +286,8 @@
 
 .disabled .pedal-svg g,
 .disabled svg,
-.disabled {
+.disabled,
+.disabled:hover {
   cursor: default;
   transition: .3s;
   fill: var(--color-grey);
@@ -355,24 +359,11 @@
   padding: 6px;
 }
 
-.pagination__left.disabled,
-.pagination__right.disabled {
-  cursor: default;
-  pointer-events: none;
-  color: var(--color-grey);
-}
-
 .pagination__left:hover,
 .pagination__right:hover,
 .winners-pagination__left:hover,
 .winners-pagination__right:hover {
   color: var(--color-gold);
-}
-
-.disabled:hover {
-  cursor: default;
-  pointer-events: none;
-  color: var(--color-grey);
 }
 
 .pagination__number,

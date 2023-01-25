@@ -15,6 +15,7 @@ export const renderGarageView = async () => {
       <div class="garage">
         ${renderMenu()}
         <div class="cars"></div>
+        <div class="win-message"></div>
         ${renderPagination()}
       </div>
       <div class="winners container" style="display: none;">

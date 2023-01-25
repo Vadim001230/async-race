@@ -1,0 +1,1 @@
+export const TIME_COEFFICIENT = 1.4;
