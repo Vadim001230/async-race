@@ -62,6 +62,6 @@ export const startRace = async () => {
   const winnerCar = document.getElementById(winnerId.toString()) as HTMLElement;
   const winnerName = winnerCar.dataset.name;
   setTimeout(() => {
-    showWinMsg(`${winnerName || 'Car'} wins! [${winnerTime}s]`);
-  }, 2600);
+    showWinMsg(`${winnerName || 'Car'} wins! [${winnerTime}sec]`);
+  }, 2700);
 };

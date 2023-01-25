@@ -2,19 +2,19 @@
 // const winnersHtml = checkSelector(document, '.winners');
 // winnersHtml.innerHTML
 export const renderWinnersView = () => `
-    <div class="winners__amount">Winners amount <span>1</span></div>
+    <div class="winners__amount">Winners amount <span>0</span></div>
 
     <div class="winners-table">
       <div class="winners-table__header winners-table__row">
-        <div class="winners-table__header-cell">Number</div>
+        <div class="winners-table__header-cell cell-hover">Number</div>
         <div class="winners-table__header-cell">Car</div>
         <div class="winners-table__header-cell">Name</div>
-        <div class="winners-table__header-cell">Wins</div>
-        <div class="winners-table__header-cell">Best time (sec)</div>
+        <div class="winners-table__header-cell cell-hover" >Wins</div>
+        <div class="winners-table__header-cell cell-hover">Best time (sec)</div>
       </div>
       <div class="winners-table__row">
-        <div class="winners-table__cell">1</div>
-        <div class="winners-table__cell">
+        <div class="winners-table__cell win-number">1</div>
+        <div class="winners-table__cell win-car">
           <svg fill="#ffffff" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
           width="70px" height="25px" viewBox="100 100 110 120" xml:space="preserve">
             <g>
@@ -43,9 +43,9 @@ export const renderWinnersView = () => `
             </g>
           </svg>
         </div>
-        <div class="winners-table__cell">Tesla</div>
-        <div class="winners-table__cell">1</div>
-        <div class="winners-table__cell">2.69</div>
+        <div class="winners-table__cell win-name"></div>
+        <div class="winners-table__cell" win-wins></div>
+        <div class="winners-table__cell win-time"></div>
       </div>
     </div>
 

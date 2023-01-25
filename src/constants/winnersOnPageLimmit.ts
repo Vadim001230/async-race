@@ -1,0 +1,1 @@
+export const WINNERS_ON_PAGE_LIMIT = 10;

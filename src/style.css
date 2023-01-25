@@ -339,6 +339,10 @@
   border: 1px solid #000;
 }
 
+.cell-hover:hover {
+  cursor: pointer;
+}
+
 .pagination,
 .winners-pagination {
   display: flex;
